@@ -1,0 +1,39 @@
+$def with (content)
+
+<!DOCTYPE html>
+<html lang="en">
+
+<!---------------------------------------------------------------------------------------->
+
+<head>
+
+	<meta charset="utf-8">
+	<meta name="AppScape Playground -PicMash via Web.Py" content="width=device-width, initial-scale=1.0">
+	
+	<title>AppScape Playground - PicMash via Web.Py</title>
+	
+	<link rel="shortcut icon" href="/static/gfx/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="/static/gfx/favicon.ico" type="image/x-icon">
+		
+	<script type="text/javascript" src="/static/picmash.js"></script>
+	<link rel="stylesheet" href="/static/picmash.css">
+
+	<!--script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script-->
+
+</head>
+
+<!---------------------------------------------------------------------------------------->
+	
+<body onhashchange="" onload="">	
+	
+	<div class="head_block">
+		<img css="logo" src="/static/gfx/as-logo_small_white.png" />
+		<div css="hl">
+			AppScape Playground - PicMash via Web.Py
+		</div>
+	</div>
+
+$:content
+
+</html>

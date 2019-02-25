@@ -1,0 +1,41 @@
+html{
+	height: 100%;
+	font-family: Verdana, sans-serif;
+}
+
+body{
+	max-height: 80%;
+	min-width:800px;
+	margin:0;
+	font-family: Verdana, sans-serif;
+	font-size:12px;
+	padding:120px 8px 8px 8px;
+	background-color:#dcdcdc;
+	background-image: url("/static/gfx/bg-pattern.png");
+}
+
+.head_block{
+	position:absolute;
+	left:0px;
+	top:0px;
+	min-width:100%;
+	min-height:120px;
+	background-color:#000;
+	color:#FFF;
+}
+.head_block img[css=logo]{
+	position:absolute;
+	left:20px;
+	top:10px;
+	max-width:300px;
+	*padding:4px;
+}
+.head_block div[css=hl]{
+	position:absolute;
+	display:table;
+	width:90%;
+	margin: 46px auto auto 60px;
+	text-align:center;
+	font-size:24px;
+	color:#FFF;
+}
