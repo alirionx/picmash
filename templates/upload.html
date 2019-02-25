@@ -1,0 +1,51 @@
+$def with ()
+
+<form method="POST" enctype="multipart/form-data" action="/upload/do" id="picmash_upload_form" >
+	<div class="action_box">
+		<div css="ab_hl">
+			Upload Pictures
+		</div>
+		
+		<input 
+			id="file_ipt" name="file_ipt" 
+			type="file" accept="image/*" multiple 
+			style="display:none" onchange="files_to_filebox(this);" 
+		/>
+		<div css="filebox" id="filebox" onclick="document.getElementById('file_ipt').click();">
+			<div>click to select</div>
+		</div>
+		
+		<div css="af_btn" onclick="form_submit('picmash_upload_form');">
+			Submit
+		</div>
+		<div css="af_btn" onclick="location.href='/config';">
+			Cancel
+		</div>
+	</div>
+</form>
+
+
+<script>
+	function files_to_filebox(domel){
+		console.log(domel.files);
+		var file_ary = domel.files;
+		var filebox = document.getElementById("filebox");
+		
+		if( file_ary.length > 0 ){
+			filebox.innerHTML = "";
+			var i;
+			for (i = 0; i < file_ary.length; i++) { 
+				var fdiv = document.createElement("DIV");
+				filebox.appendChild(fdiv);
+				var fsize = Math.round((file_ary[i].size / 1024 )) + " kb";
+				fdiv.innerHTML = file_ary[i].name + " ("+fsize+")";
+			}
+		}
+	}
+	
+	function form_submit(domid){
+		var form = document.getElementById(domid);
+		form.submit();
+	}
+	
+</script>

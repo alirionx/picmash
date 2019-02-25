@@ -1,3 +1,24 @@
-$def with (data='')
+$def with (mash_ary, mpath)
 
-<h3>Hello $data</h3>
+$ idx1 = mash_ary.keys()[0]
+$ idx2 = mash_ary.keys()[1]
+
+$ img1 = mash_ary[idx1]
+$ img2 = mash_ary[idx2]
+
+$ src1 = img1['hash'] + '.' + img1['mime']
+$ src2 = img2['hash'] + '.' + img2['mime']
+
+
+<div class="view_hl">Choose your favorite picture</div>
+
+<table class="mash_frame" border="0">
+	<tr>
+		<td>
+			<img src="$mpath$src1" onclick="location.href='/vote/$idx1/$idx2'" />
+		</td>
+		<td>
+			<img src="$mpath$src2" onclick="location.href='/vote/$idx2/$idx1'" />
+		</td>
+	</tr>
+</table>

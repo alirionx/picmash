@@ -1,0 +1,18 @@
+$def with (defi, val)
+
+$ col   = defi['col']
+$ manda = defi['manda']
+$ align = defi['align']
+$ placeholder = defi['placeholder']
+
+$ ddfk = defi['ddfk']
+
+
+<select type="dropdoen" key="$col" manda="$manda" >
+$for opt in ddfk:
+	$ issel = ''
+	$if val == opt: 
+		$ issel = 'selected'
+	
+	<option value="$opt" $issel>$ddfk[opt]</option>
+</select>
