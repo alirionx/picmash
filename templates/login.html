@@ -1,0 +1,27 @@
+$def with ()
+
+<form method="POST" action="/login/do" id="admin_login_form">
+	<div class="action_box">
+		<div css="ab_hl">
+			Admin Login
+		</div>
+		
+		<input id="pwd" name="pwd" type="password" placeholder="Admin password" />
+		
+		<div css="af_btn" onclick="form_submit('admin_login_form');">
+			Submit
+		</div>
+		<div css="af_btn" onclick="location.href='/';">
+			Cancel
+		</div>
+	</div>
+</form>
+
+
+<script>	
+	function form_submit(domid){
+		var form = document.getElementById(domid);
+		form.submit();
+	}
+	
+</script>

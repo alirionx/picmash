@@ -1,3 +1,74 @@
-$def with (data='')
+$def with (defi, data, mpath)
 
-<h3>Hello $data</h3>
+<div class="view_hl">Admin Area</div>
+
+<div class="btn_frame">
+	
+	<button onclick="location.href='/upload';">
+		Upload pictures
+	</button>
+	
+	<button onclick="reset_ranking_call();">
+		Reset ranking
+	</button>
+	
+	<button onclick="reset_app_call();">
+		Reset App
+	</button>
+	
+</div>
+
+<table class="content_table">
+	<tr>
+		<th align="center">Thumb</th>
+		$for col in defi:
+			<th align="$col['align']">$col['txt']</th>
+		
+		<th align="center">Option</th>
+	<tr>
+	
+	$for row in data:
+		<tr>
+			<td align="center">
+				<img css="thumb" src="$mpath$row['hash'].$row['mime']" />
+			</td>
+			$for col in defi:
+				<td align="$col['align']">$row[col['col']]</td>
+			
+			<td align="center">
+				<button onclick="delete_pic_call('$row['hash'].$row['mime']');">
+					delete
+				</button>
+			</td>
+		</tr>
+</table>
+
+<script>
+	function reset_ranking_call(){
+		
+		var chk = confirm("Do you really want to reset the ranking?");
+		if (chk == true) {
+			location.href = "/ranking/reset";
+		}
+		
+	}
+	
+	function reset_app_call(){
+		
+		var chk = confirm("Do you really want to reset the whole App?");
+		if (chk == true) {
+			location.href = "/app/reset";
+		}
+		
+	}
+	
+	function delete_pic_call(fn){
+		
+		var chk = confirm("Do you really want to delete this picture?");
+		if (chk == true) {
+			location.href = '/pic/delete/'+fn;
+		}
+		
+	}
+	
+</script>

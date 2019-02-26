@@ -1,4 +1,4 @@
-$def with (mash_ary, mpath)
+$def with (mash_ary, mpath, vhash)
 
 $ idx1 = mash_ary.keys()[0]
 $ idx2 = mash_ary.keys()[1]
@@ -15,10 +15,10 @@ $ src2 = img2['hash'] + '.' + img2['mime']
 <table class="mash_frame" border="0">
 	<tr>
 		<td>
-			<img src="$mpath$src1" onclick="location.href='/vote/$idx1/$idx2'" />
+			<img src="$mpath$src1" onclick="location.href='/vote/$vhash/$idx1/$idx2'" />
 		</td>
 		<td>
-			<img src="$mpath$src2" onclick="location.href='/vote/$idx2/$idx1'" />
+			<img src="$mpath$src2" onclick="location.href='/vote/$vhash/$idx2/$idx1'" />
 		</td>
 	</tr>
 </table>

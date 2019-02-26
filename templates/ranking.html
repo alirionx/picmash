@@ -1,0 +1,48 @@
+$def with (defi, data, mpath)
+
+<div class="view_hl">Picture Mash Ranking</div>
+
+<table class="content_table">
+	<tr>
+		<th align="center">Thumb</th>
+	$for col in defi:
+		<th align="$col['align']">$col['txt']</th>
+	<tr>
+	
+	$for row in data:
+		<tr>
+			<td align="center">
+				<img css="thumb" src="$mpath$row['hash'].$row['mime']" onmouseover="thumb_show(this)" onmouseout="thumb_hide(this)" />
+			</td>
+		$for col in defi:
+			<td align="$col['align']">$row[col['col']]</td>
+			
+		</tr>
+</table>
+
+
+<script>
+	function thumb_show(domel){
+		
+		var thumb_ary = document.getElementsByClassName("thumb_frame");
+		var i;
+		for (i = 0; i < thumb_ary.length; i++) { 
+			document.body.removeChild(thumb_ary[i]);
+		}
+		
+		var src = domel.src;
+		var thumb_frame = document.createElement("IMG")
+		document.body.appendChild(thumb_frame);
+		thumb_frame.classList.add("thumb_frame");
+		thumb_frame.src = src;
+	}
+	
+	function thumb_hide(domel){
+		var thumb_ary = document.getElementsByClassName("thumb_frame");
+		var i;
+		for (i = 0; i < thumb_ary.length; i++) { 
+			document.body.removeChild(thumb_ary[i]);
+		}
+	}
+
+</script>

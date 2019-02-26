@@ -40,6 +40,28 @@ body{
 	color:#FFF;
 }
 
+.menue_bar{
+	display:inline-block;
+	position:absolute;
+	right:10px;
+	bottom:10px;
+}
+.menue_bar div{
+	display:inline-block;
+	min-width:80px;
+	border-right: 2px solid #FFF;
+	*font-weight:bold;
+	text-align:center;
+	color:#FFF;
+	cursor:pointer;
+}
+.menue_bar div:hover{
+	text-decoration:underline;
+}
+.menue_bar div:last-child{
+	border-right: none;
+}
+
 .action_box{
 	display:block;
 	margin:10px auto auto auto; 
@@ -50,6 +72,17 @@ body{
 	text-align:center;
 	background-color:#E6E6E6;
 	box-shadow:2px 4px 6px #666;
+}
+.action_box input{
+	width:90%;
+	padding:2%;
+	margin: 10px auto 10px auto;
+	background-color:#FFF;
+	border:1px solid #888;
+	border-radius:6px;
+	color:#000;
+	font-size:14px;
+	text-align:center;
 }
 .action_box div[css=ab_hl]{
 	width:96%;
@@ -133,3 +166,85 @@ body{
 	cursor:pointer;
 }
 
+
+.content_table{
+	margin:10px auto 10px auto;
+	min-width:800px;
+	font-size:14px;
+}
+.content_table th{
+	padding:8px;
+	font-weight:bold;
+	font-size:13px;
+	background-color:#000;
+	color:#FFF;
+	cursor:pointer;
+}
+.content_table th:last-child{
+	text-align:center;
+	width:100px;
+}
+.content_table td{
+	padding:8px;
+	font-size:14px;
+	background-color:#FFF;
+	color:#000;
+}
+.content_table td:last-child{
+	text-align:center;
+	width:100px;
+}
+.content_table td img[css=thumb]{
+	max-height:50px;
+	margin:-4px;
+	border-radius:6px;
+	border:1px solid #888;
+	box-shadow:1px 1px 2px #888;
+	cursor:pointer;
+}
+.content_table button{
+	min-width:80px;
+	padding:4px;
+	margin: -4px;
+	background-color:#333;
+	border:none;
+	border-radius:6px;
+	color:#FFF;
+	font-weight:bold;
+	font-size:12px;
+	cursor:pointer;
+}
+.content_table button:hover{
+	background-color:#000;
+}
+
+.thumb_frame{
+	position:fixed;
+	right:40px;
+	bottom:40px;
+	max-width:500px;
+	border-radius:20px;
+	border:1px solid #444;
+	box-shadow:2px 2px 4px #444;
+}
+
+.btn_frame{
+	text-align:center;
+	padding:10px;
+}
+.btn_frame button{
+	min-width:120px;
+	padding:10px;
+	margin: 10px;
+	background-color:#333;
+	border:none;
+	border-radius:6px;
+	color:#FFF;
+	font-weight:bold;
+	font-size:12px;
+	cursor:pointer;
+}
+.btn_frame button:hover{
+	background-color:#000;
+}
+	

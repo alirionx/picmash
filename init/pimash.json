@@ -1,0 +1,26 @@
+{
+	"defi": [
+		{
+			"col": "hash",
+			"txt": "Media Hash",
+			"align": "center"
+		},
+		{
+			"col": "win",
+			"txt": "Wins",
+			"align": "center"
+		},
+		{
+			"col": "loss",
+			"txt": "Losses",
+			"align": "center"
+		},
+		{
+			"col": "rate",
+			"txt": "Rate",
+			"align": "center"
+		}
+	],
+	"data": [
+	]
+}

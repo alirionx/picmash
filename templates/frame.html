@@ -1,5 +1,7 @@
 $def with (content)
 
+$ btn_ary = [ ["/","Voting"], ["/ranking","Ranking"], ["/config","Config"] ]
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -31,6 +33,10 @@ $def with (content)
 		<img css="logo" src="/static/gfx/as-logo_small_white.png" />
 		<div css="hl">
 			AppScape Playground - PicMash via Web.Py
+		</div>
+		<div class="menue_bar">
+		$for btn in btn_ary:
+			<div onclick="location.href='$btn[0]'">$btn[1]</div>
 		</div>
 	</div>
 
