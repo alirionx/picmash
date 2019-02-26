@@ -111,6 +111,8 @@ def img_scan():
 
 if not os.path.isdir(mroot):
 	os.makedirs(mroot)
+	
+if not os.path.isdir(mroot+'/files/'):
 	os.makedirs(mroot+'/files/')
 	
 if not os.path.isfile(flatdata):
