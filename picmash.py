@@ -281,13 +281,18 @@ class ranking_call:
 			try:
 				rate = float(row['win']) / ( row['win'] + row['loss'] )
 				perc = round(rate*100, 1)
-				data[i]['rate'] = str(perc) + '%'
+				#data[i]['rate'] = str(perc) + '%'
+				data[i]['rate'] = perc
 			except:
-				data[i]['rate'] = '50.0%'
+				data[i]['rate'] = 50.0
 				
 			i += 1
 		
 		data = sorted(data, key = lambda dct:dct['rate'], reverse = True )
+		i = 0
+		for row in data:
+			data[i]['rate'] = str(row['rate']) + '%'
+			i += 1
 		
 		htmres = render.ranking(defi, data, mpath )
 		return htmres;
