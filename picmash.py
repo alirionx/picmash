@@ -32,6 +32,8 @@ urls = (
 
 #---Sys Config---------------------------------------------
 
+# docker run -itd -p81:80 --name picmash1 alirionx/picmash:v01
+
 adminpw = 'Oviss1234!'
 
 mroot = 'static/media/'
